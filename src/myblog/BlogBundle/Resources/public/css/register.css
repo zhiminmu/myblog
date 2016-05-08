@@ -1,0 +1,19 @@
+.form-control{
+	border: none;
+}
+button{
+	margin-bottom: 20px;
+}
+.panel-footer{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	text-align:center;
+	width:100%;
+	font-family:Microsoft YaHei;
+	font-size:14px;
+	/*background-color:#0000ff;*/
+	/*color:white;*/
+	padding:10px 0;
+
+}

@@ -1,0 +1,15 @@
+blog_homepage:
+    path: /
+    defaults: { _controller: BlogBundle:Default:index }
+blog_login:
+    path: /login
+    defaults: { _controller: BlogBundle:Login:index }
+blog_login_check:
+    path: /login/check
+    defaults: { _controller: BlogBundle:Login:check }
+blog_register:
+    path: /register
+    defaults: { _controller: BlogBundle:Register:register }
+blog_register_agreement:
+    path: /register/agreement
+    defaults: { _controller: BlogBundle:Register:agreement }

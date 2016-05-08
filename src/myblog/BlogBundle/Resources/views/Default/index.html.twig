@@ -1,0 +1,26 @@
+{% extends 'BlogBundle::layout.html.twig' %}
+{% block title %}homepage{% endblock %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" type="text/css" href="index.css">
+{% endblock %}
+
+{% block body %}
+	{% block header %}
+		{% include 'BlogBundle::weixin-alert.html.twig'%}
+    	{% include 'BlogBundle::site-hint.html.twig' %}
+    	{% include 'BlogBundle:Default:header.html.twig' %}
+
+	{% endblock %}
+	{% block content %}
+		<div>
+			<button class="btn btn-pramary btn-lg" id="login" data-toggle="modal" data-target="#mymodel">登录
+			</button>
+			
+		</div>
+	{% endblock %}
+	{% block javascripts %}
+    <script src="{{ asset('bundles/blog/js/jquery-2.1.4.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/blog/js/index.js') }}"></script>
+  	{% endblock %}
+{% endblock %}

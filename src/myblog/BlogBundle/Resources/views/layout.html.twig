@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>
+    {% block title %}      
+    {% endblock %}
+  </title>
+
+  {% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/blog/css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/blog/css/theme.css') }}">
+  {% endblock %}
+</head>
+<body {% if bodyClass|default('') %}class="{{ bodyClass }}"{% endif %}>
+
+{% block body %}
+
+  <div class="es-wrap">
+
+    {% block header %}
+    {% endblock %}
+    
+    {% block full_content %}
+      {% block top_content %}{% endblock %}
+      
+      <div id="content-container" class="container">
+        {% block content %}{% endblock %}
+      </div>
+    {% endblock %}
+    
+    {% block footer %}
+      {% include 'BlogBundle:Default:footer.html.twig' %}
+    {% endblock %}
+
+    {% block bottom %}{% endblock %}
+    </div>
+  {% block javascripts %}
+    <script src="{{ asset('bundles/blog/js/jquery-2.1.4.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/blog/js/bootstrap.js') }}"></script>
+  {% endblock %}
+
+  {% block esBar %}
+    
+  {% endblock %}
+  <div id="login-modal" class="modal" data-url="/login/ajax"></div>
+  <div id="modal" class="modal"></div>
+{% endblock %}
+
+
+</body>
+</html>
