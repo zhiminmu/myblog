@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Symfony Standard Edition
 ========================
 
@@ -66,3 +67,7 @@ Enjoy!
 [10]: https://symfony.com/doc/3.0/cookbook/email.html
 [11]: https://symfony.com/doc/3.0/cookbook/logging/monolog.html
 [13]: https://symfony.com/doc/3.0/bundles/SensioGeneratorBundle/index.html
+=======
+# myblog
+博客主要包括注册、登录、发文章、评论等功能
+>>>>>>> 223c0966d18f5c7d9aafea17536299376be112ce
