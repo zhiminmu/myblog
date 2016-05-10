@@ -3,7 +3,6 @@
 {% block stylesheets %}
 	{{ parent() }}
 	<link rel="stylesheet" type="text/css" href="{{ asset('bundles/blog/css/register.css') }}">
-	}
 {% endblock %}
 
 {% block header %}
@@ -53,11 +52,7 @@
 	</div>
 {% endblock %}
 {% block footer %}
-	<div class="panel-footer">
-		<center>Copyright &copy;2016-05-06 muzhimin,All rights reserved</center>
-		<center>author muzhimin</center>
-		<center>Email:1075241191@qq.com</center>
-	</div>
+	{% include 'BlogBundle:Default:footer.html.twig' %}
 {% endblock %}
 {% block javascripts %}
 	{{ parent() }}

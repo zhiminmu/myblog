@@ -15,7 +15,7 @@
 
   {% block stylesheets %}
     <link rel="stylesheet" type="text/css" href="{{ asset('bundles/blog/css/bootstrap.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/blog/css/theme.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/blog/css/layout.css') }}">
   {% endblock %}
 </head>
 <body {% if bodyClass|default('') %}class="{{ bodyClass }}"{% endif %}>
@@ -28,11 +28,7 @@
     {% endblock %}
     
     {% block full_content %}
-      {% block top_content %}{% endblock %}
       
-      <div id="content-container" class="container">
-        {% block content %}{% endblock %}
-      </div>
     {% endblock %}
     
     {% block footer %}

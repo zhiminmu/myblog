@@ -2,23 +2,112 @@
 {% block title %}homepage{% endblock %}
 
 {% block stylesheets %}
-	<link rel="stylesheet" type="text/css" href="index.css">
+	{{ parent() }}
+	<link rel="stylesheet" type="text/css" href="{{ asset('bundles/blog/css/index.css') }}">
 {% endblock %}
 
 {% block body %}
 	{% block header %}
-		{% include 'BlogBundle::weixin-alert.html.twig'%}
-    	{% include 'BlogBundle::site-hint.html.twig' %}
-    	{% include 'BlogBundle:Default:header.html.twig' %}
+    	<!-- {% include 'BlogBundle:Default:header.html.twig' %} -->
+	{% endblock %}
 
-	{% endblock %}
-	{% block content %}
-		<div>
-			<button class="btn btn-pramary btn-lg" id="login" data-toggle="modal" data-target="#mymodel">登录
-			</button>
-			
+	{% block full_content %}
+
+		<div class="full-content">
+				<div class="content">
+					<header id="masthead" role="banner" class="clearfix">
+						<p class="logo"><a href="{{ asset('bundles/blog/imgs/logo.img') }}"></a><span>myblog</span></p>
+						<div >
+							<nav role="navigation">
+								<ul>
+									<li>001</li>
+									<li>001</li>
+									<li>001</li>
+									<li>001</li>
+									<li>001</li>
+								</ul>
+							</nav>
+							<form method="get" role="search">
+								<label for="search" style="display: none"></label>
+								<input type="text" name="search" placeholder="search"></input>
+							</form>
+						</div>
+					</header>
+					<!-- 主页面 -->
+					<div id="main" role="main">
+						<h1>recent entries</h1>
+						<section class="entry">
+							<header>
+								<h2 lang="es">The first article index</h2>
+								<p class="date">
+									<time datetime="2016-5-09" pubdate="pubdate">2016-5-09</time>
+								</p>
+							</header>
+							<div class="intro">
+								<p>Tody is a funny day ...</p>
+								<p class="continued"><a href="#">continue</a></p>
+							</div>
+						</section>
+						<section class="entry">
+							<header>
+								<h2 lang="es">The second article index</h2>
+								<p class="date">
+									<time datetime="2016-5-09" pubdate="pubdate">2016-5-09</time>
+								</p>
+							</header>
+							<div class="intro">
+								<p>Tody is a funny day ...</p>
+								<p class="continued"><a href="#">continue</a></p>
+							</div>
+						</section>
+						<section class="entry">
+							<header>
+								<h2 lang="es">The third article index</h2>
+								<p class="date">
+									<time datetime="2016-5-09" pubdate="pubdate">2016-5-09</time>
+								</p>
+							</header>
+							<div class="intro">
+								<p>Tody is a funny day ...</p>
+								<p class="continued"><a href="#">continue</a></p>
+							</div>
+						</section>
+					</div>
+					<!-- 侧边栏 -->
+					<div id="related" class="sidebar" role="complementary">
+						<aside class="excerpt">
+							<h2>From my window</h2>
+							<ul>
+								<li><a href="#">文章</a></li>
+								<li><a href="#">评论</a></li>
+								<li><a href="#">设置</a></li>
+								<li><a href="#">新闻</a></li>
+							</ul>						
+						</aside>
+						<aside class="archive">
+							<nav role="navigation">
+								<h2>Archive</h2>
+								<ul>
+									<li><a href="#">dskjvd</a></li>
+									<li><a href="#">dskjvd</a></li>
+									<li><a href="#">dskjvd</a></li>
+									<li><a href="#">dskjvd</a></li>
+									<li><a href="#">dskjvd</a></li>
+								</ul>
+							</nav>
+						</aside>
+					</div>
+				</div>	
+						
 		</div>
+
+		
 	{% endblock %}
+
+	{% block footer %}
+		{% include 'BlogBundle:Default:footer.html.twig' %}
+	{% endblock %}
+
 	{% block javascripts %}
     <script src="{{ asset('bundles/blog/js/jquery-2.1.4.js') }}"></script>
     <script type="text/javascript" src="{{ asset('bundles/blog/js/index.js') }}"></script>
