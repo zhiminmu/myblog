@@ -7,9 +7,9 @@
 {% endblock %}
 
 {% block body %}
-	{% block header %}
-    	<!-- {% include 'BlogBundle:Default:header.html.twig' %} -->
-	{% endblock %}
+	<!-- {% block header %}
+    	{% include 'BlogBundle:Default:header.html.twig' %} 
+	{% endblock %} -->
 
 	{% block full_content %}
 
@@ -17,20 +17,31 @@
 				<div class="content">
 					<header id="masthead" role="banner" class="clearfix">
 						<p class="logo"><a href="{{ asset('bundles/blog/imgs/logo.img') }}"></a><span>myblog</span></p>
-						<div >
+						<div class="nav">
 							<nav role="navigation">
-								<ul>
-									<li>001</li>
-									<li>001</li>
-									<li>001</li>
-									<li>001</li>
-									<li>001</li>
+								<ul class="nav-left">
+									<li>首页</li>
+									<li>博文</li>
+									<li>评论</li>
+									<li>话题</li>
+								</ul>	
+							</nav>
+							
+						</div>
+						<div class="search">
+							<form method="get" role="search">
+								<label for="search" style="display: none">search</label>
+								<input type="text" name="search" placeholder="search"></input>
+								<span>
+									<button class="btn" type="button">go</button>
+								</span>
+							</form>
+							<nav role="user-status">
+								<ul class="nav-right">
+									<li><a href="{{path('blog_register')}}">注册</a></li>
+									<li><a href="{{path('blog_login')}}">登录</a></li>
 								</ul>
 							</nav>
-							<form method="get" role="search">
-								<label for="search" style="display: none"></label>
-								<input type="text" name="search" placeholder="search"></input>
-							</form>
 						</div>
 					</header>
 					<!-- 主页面 -->

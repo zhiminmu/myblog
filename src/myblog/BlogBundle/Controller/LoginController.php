@@ -6,8 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class LoginController extends Controller
 {
-    public function indexAction()
+    public function LoginAction()
     {
-        return $this->render('BlogBundle:Login:index.html.twig');
+        return $this->render('BlogBundle:Login:login.html.twig');
     }
 }

@@ -1,27 +1,44 @@
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
-   aria-labelledby="myModalLabel" aria-hidden="true">
-   <div class="modal-dialog">
-      <div class="modal-content">
-         <div class="modal-header">
-            <button type="button" class="close" 
-               data-dismiss="modal" aria-hidden="true">
-                  &times;
-            </button>
-            <h4 class="modal-title" id="myModalLabel">
-               模态框（Modal）标题
-            </h4>
+{% extends 'BlogBundle::layout.html.twig' %}
+{% block title %}login{% endblock %}
+{% block stylesheets %}
+   {{ parent() }}
+   <link rel="stylesheet" type="text/css" href="{{ asset('bundles/blog/css/register.css') }}">
+{% endblock %}
+
+{% block full_content %}
+   <center><h1>{{ "用户登录" }}</h1></center>
+   <div class="container">
+      <form class="login" method="post" >
+         <div class="form-group">
+            <div class="form-control">
+               <input name="username" type="text" placeholder="username/email/cellphone" />
+            </div>
          </div>
-         <div class="modal-body">
-            在这里添加一些文本
+
+         <div class="form-group">
+            <div class="form-control">
+               <input name="password" type="password" placeholder="password" />
+            </div>
          </div>
-         <div class="modal-footer">
-            <button type="button" class="btn btn-default" 
-               data-dismiss="modal">关闭
-            </button>
-            <button type="button" class="btn btn-primary">
-               提交更改
-            </button>
+
+         <div class="form_group">
+            <div class="submit">
+               <button class="btn-login" type="submit">登录</button>
+               <!-- <input class="tip" type="checkbox">下次自动登录</input> -->
+            </div>
+            <ul>
+               <li><a href="">忘记密码</a></li>
+               <li><a href="{{path('blog_register')}}">立即注册</a></li>
+            </ul>
          </div>
-      </div><!-- /.modal-content -->
-   </div><!-- /.modal -->
-</div>
+      </form>
+   </div>
+{% endblock %}
+{% block footer %}
+   {% include 'BlogBundle:Default:footer.html.twig' %}
+{% endblock %}
+{% block javascripts %}
+   {{ parent() }}
+   <script type="text/javascript" src="{{ asset('bundles/blog/js/register.js') }}"></script>
+{% endblock %}
+

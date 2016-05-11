@@ -112,7 +112,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         if (0 === strpos($pathinfo, '/login')) {
             // blog_login
             if ($pathinfo === '/login') {
-                return array (  '_controller' => 'myblog\\BlogBundle\\Controller\\LoginController::indexAction',  '_route' => 'blog_login',);
+                return array (  '_controller' => 'myblog\\BlogBundle\\Controller\\LoginController::loginAction',  '_route' => 'blog_login',);
             }
 
             // blog_login_check

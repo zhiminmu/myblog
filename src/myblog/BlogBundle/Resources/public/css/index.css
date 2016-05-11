@@ -4,17 +4,19 @@ ul li{
 	padding-left: 18px;
 }
 .nav li{
+	/*list-style: none;*/
 	float: left;
 	font-size: .75em;
 	padding: 0 25px 0 3px;
 }
-nav{
+/*nav{
 	background-color: #dd8844;
 	clear: both;
 }
-
+*/
 .full-content{
 	background: #ff00ee;
+	background-image: url("bundles/blog/imgs/bg.jpg");
 	width: 90%;
 	max-width: 950px;
 	margin: 100px auto;
@@ -102,6 +104,57 @@ aside h2{
 	position: relative;
 	top: -1em;
 	float: right;
+}
+
+#masthead .nav{
+	position: relative;
+	float: left;
+	clear: both;
+	text-align: left;
+	font-size: 1.5em;
+}
+
+
+#masthead .search{
+	position: relative;
+	float: right;
+}
+
+#masthead form{
+	position: absolute;
+	top: 7px;
+	right: 0;
+}
+#masthead form input{
+	display: inline-block;
+}
+#masthead form button{
+	overflow: visible;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+
+
+#masthead nav{
+	margin-top: 45px;
+}
+
+.nav-right li{
+	float: left;
+}
+
+
+#masthead button{
+	float: left;
+}
+.panel-footer{
+	position: relative;
+	bottom: 15px;
+}
+.panel-footer p{
+	margin-bottom: -10px;
 }
 
 
